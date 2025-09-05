@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Blocked</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+    h1 {
+      font-size: 36px;
+      color: #ff4136;
+    }
+    p {
+      font-size: 18px;
+    }
+    .url {
+      font-weight: bold;
+      color: #0074d9;
+    }
+  </style>
+</head>
+<body>
+  <h1>Website Blocked</h1>
+  <p>The website <span id="blocked-url" class="url"></span> has been blocked by FocusGuard.</p>
+  <p>Stay focused!</p>
+
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const blockedUrl = urlParams.get('url');
+    if (blockedUrl) {
+      document.getElementById('blocked-url').textContent = blockedUrl;
+    }
+  </script>
+</body>
+</html>
