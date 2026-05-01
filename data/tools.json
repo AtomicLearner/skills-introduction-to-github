@@ -1,0 +1,82 @@
+[
+  {
+    "id": "1",
+    "name": "ChatGPT",
+    "description": "Advanced conversational AI model capable of answering questions, writing essays, summarizing text, and coding.",
+    "category": "Writing",
+    "url": "https://chat.openai.com",
+    "priceType": "Freemium"
+  },
+  {
+    "id": "2",
+    "name": "Midjourney",
+    "description": "Generates stunning and highly detailed images from text descriptions. Great for artists and designers.",
+    "category": "Image",
+    "url": "https://midjourney.com",
+    "priceType": "Paid"
+  },
+  {
+    "id": "3",
+    "name": "GitHub Copilot",
+    "description": "Your AI pair programmer. Suggests code and entire functions in real-time right from your editor.",
+    "category": "Code",
+    "url": "https://github.com/features/copilot",
+    "priceType": "Paid"
+  },
+  {
+    "id": "4",
+    "name": "Notion AI",
+    "description": "Integrated AI assistant within Notion to write better, think bigger, and summarize notes faster.",
+    "category": "Writing",
+    "url": "https://notion.so",
+    "priceType": "Paid"
+  },
+  {
+    "id": "5",
+    "name": "DALL-E 3",
+    "description": "OpenAI's image generation model that creates highly accurate images based on precise prompts.",
+    "category": "Image",
+    "url": "https://openai.com/dall-e-3",
+    "priceType": "Paid"
+  },
+  {
+    "id": "6",
+    "name": "Cursor",
+    "description": "The AI-first code editor. Built to make you extraordinarily productive, with an AI that knows your entire codebase.",
+    "category": "Code",
+    "url": "https://cursor.sh",
+    "priceType": "Freemium"
+  },
+  {
+    "id": "7",
+    "name": "Jasper",
+    "description": "AI copywriter that helps you create high-quality content for blogs, social media, and marketing faster.",
+    "category": "Writing",
+    "url": "https://jasper.ai",
+    "priceType": "Paid"
+  },
+  {
+    "id": "8",
+    "name": "Canva Magic Studio",
+    "description": "Suite of AI tools within Canva to automatically generate designs, edit images, and write copy.",
+    "category": "Design",
+    "url": "https://canva.com",
+    "priceType": "Freemium"
+  },
+  {
+    "id": "9",
+    "name": "Codeium",
+    "description": "Free AI code completion and chat tool for developers, supporting over 70 programming languages.",
+    "category": "Code",
+    "url": "https://codeium.com",
+    "priceType": "Free"
+  },
+  {
+    "id": "10",
+    "name": "Claude",
+    "description": "Next-generation AI assistant built for work, trained to be safe, accurate, and secure.",
+    "category": "Writing",
+    "url": "https://anthropic.com/claude",
+    "priceType": "Freemium"
+  }
+]
