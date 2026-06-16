@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import Navbar from '@/components/Navbar';
 import ToolCard from '@/components/ToolCard';
 import Footer from '@/components/Footer';
@@ -9,7 +9,18 @@ import { Tool } from '@/types';
 
 export default function Home() {
   const [searchQuery, setSearchQuery] = useState('');
+  const [debouncedSearchQuery, setDebouncedSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
+
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedSearchQuery(searchQuery);
+    }, 300); // 300ms debounce
+
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [searchQuery]);
 
   const tools: Tool[] = toolsData as Tool[];
 
@@ -23,14 +34,14 @@ export default function Home() {
   const filteredTools = useMemo(() => {
     return tools.filter(tool => {
       const matchesSearch =
-        tool.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        tool.description.toLowerCase().includes(searchQuery.toLowerCase());
+        tool.name.toLowerCase().includes(debouncedSearchQuery.toLowerCase()) ||
+        tool.description.toLowerCase().includes(debouncedSearchQuery.toLowerCase());
 
       const matchesCategory = selectedCategory === 'All' || tool.category === selectedCategory;
 
       return matchesSearch && matchesCategory;
     });
-  }, [tools, searchQuery, selectedCategory]);
+  }, [tools, debouncedSearchQuery, selectedCategory]);
 
   return (
     <div className="min-h-screen bg-[#FAFAFA] flex flex-col">
