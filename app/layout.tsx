@@ -1,22 +1,27 @@
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
-import './globals.css'
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+import StitchesRegistry from './StitchesRegistry';
+// Note: globals.css is removed because we're using Stitches global styles
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: 'AI Tools Directory',
-  description: 'Professional directory of AI tools',
-}
+  title: 'Atelier | Premium Footwear',
+  description: 'Highly aesthetic and premium footwear.',
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className} style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', margin: 0 }}>
+        <StitchesRegistry>
+          {children}
+        </StitchesRegistry>
+      </body>
     </html>
-  )
+  );
 }
